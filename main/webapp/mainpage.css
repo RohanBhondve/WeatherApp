@@ -1,0 +1,154 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.mainContainer {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 450px;
+}
+
+.searchInput {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+#searchInput {
+    flex-grow: 1;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 25px 0 0 25px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+#searchInput::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#searchButton {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 0 25px 25px 0;
+    background-color: #5b548a;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#searchButton:hover {
+    background-color: #4a4579;
+}
+
+.weatherDetails {
+    text-align: center;
+}
+
+.temperatureDetails{
+	font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+   
+
+}
+
+
+.cityDetails {
+    margin-bottom: 1.5rem;
+    
+}
+
+.cityDetails .desc {
+    margin-bottom: 1.5rem;
+	font-size: 2.5rem;
+    margin-top: 0.5rem;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.cityDetails .date {
+    font-size: 1.5rem;
+    opacity: 0.8;
+    font-family: 'JetBrains Mono', monospace;
+}
+.cityDetails .icon{
+	margin-top: 0.5rem;
+	height:100px;
+	width:100px;
+}
+
+.windDetails {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+.humidityBox,
+.windSpeed {
+    display: flex;
+    align-items: center;
+    width: 48%;
+}
+
+.humidityBox img,
+.windSpeed img {
+    width: 40px;
+    height: 40px;
+    margin-right: 1rem;
+}
+
+.humidity,
+.wind {
+    text-align: left;
+}
+
+.humidity span,
+.wind span {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.humidity h2,
+.wind h2 {
+    font-size: 1.2rem;
+    margin-top: 0.25rem;
+}
+
+@media (max-width: 480px) {
+    .mainContainer {
+        padding: 1.5rem;
+    }
+
+    .cityDetails .desc {
+        font-size: 1.2rem;
+    }
+
+    .windDetails {
+        flex-direction: column;
+    }
+
+    .humidityBox,
+    .windSpeed {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
